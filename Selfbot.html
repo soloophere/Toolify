@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Toolify | Self Bot</title>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #16141d;
+    color: white;
+}
+#loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s ease-in-out;
+    }
+
+    #loader.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255, 0, 0, 0.3);
+      border-top: 5px solid red;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .logo {
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
+}
+
+nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 30px;
+      transition: transform 0.3s  ease, color 0.3s ease;
+      color: #fff;
+      display: inline-block;
+    }
+
+
+    nav a:hover {
+  color: #b4b4b4; 
+}
+
+header {
+    background-color: #1d1e28;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-header {
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.center-header h1 {
+    font-size: 3em; 
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px; 
+    margin: 0;
+}
+
+.center-header h1 .heading-icon {
+        width: 40px; 
+        height: auto; 
+        margin-right: 10px; 
+    }
+
+.content {
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #fff; 
+}
+
+.content h2 .icon {
+    margin-left: 10px; 
+    width: 24px; 
+    height: auto; 
+}
+.content p, .content li {
+    font-size: 1.2em; 
+    line-height: 1.8;
+    color: #d0d0d0; 
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    margin-bottom: 15px;
+    padding-left: 30px; 
+    position: relative;
+}
+
+.content ul li::before {
+    content: "\2022"; 
+    color: red; 
+    font-size: 1.5em; 
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.command-box {
+    background-color: #1d1e28;
+    border: 1px solid #2c2f3a;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    color: #ffffff;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: auto; 
+    display: inline-block; 
+}
+
+
+.important-links {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: #b0b0b0;
+}
+
+.important-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+.important-links a:hover {
+    text-decoration: underline;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.video-embed {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 315px; 
+    max-width: 560px;
+}
+
+@media (max-width: 768px) {
+    .video-embed {
+        height: 315px; 
+    }
+}
+
+footer {
+    background-color: #1d1e28;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14.4px;
+    line-height: 1.2;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+      </div>
+    
+    <header>
+        <nav>
+            <img src="assets/images/logo.png" alt="Toolify Logo" class="logo">
+            <div>
+                <a href="index.html">Home</a>
+                <a href="">FAQs</a>
+                <a href="Terms.html">Terms & Conditions</a>
+                <a href="products.html">Products</a>
+                <a href="">Docs</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="center-header">
+        <h1><img src="assets/images/profile.png" alt="Icon" class="heading-icon"> Toolify Self Bot</h1>
+        <p>Unlock more capabilities with our more advanced Self Bot with high Scoofing Abilities. It consist of 300+ commands and every single Feature possible</p>
+    </section>
+
+
+    <div class="content">
+        <h2>Showcase <img src="assets/images/showcase.png" alt="Icon" class="icon"></h2>
+        <iframe class="video-embed" src="https://www.youtube.com/embed/BiKaeTpBoPI"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <h2>Commands  <img src="assets/images/commands.png" alt="Icon" class="icon"></h2>
+        <div class="command-box">/Not Providied</div>
+
+        <div class="important-links">
+            <p><img src="assets/images/links.png" alt="Important Links Icon" style="width: 18px; height: 18px; margin-right: 5px;"> Some Important Links:</p>
+            <a href="https://discord.gg/toolifyshop "><i class="fab fa-discord"></i> Discord</a> | 
+        <a href="https://toolify.mysellix.io/"><i class="fas fa-store"></i> Webstore</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>  © Toolify - Provided by Quantum Developments.</p>
+    </footer>
+    <script>
+    
+        document.querySelectorAll('nav a').forEach(link => {
+          link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href !== '#') {
+              e.preventDefault(); 
+              const loader = document.getElementById('loader');
+              loader.classList.add('active'); 
+              setTimeout(() => {
+                window.location.href = href; 
+              }, 500); 
+            }
+          });
+        });
+      </script>
+</body>
+</html>

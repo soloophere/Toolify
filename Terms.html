@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+        <title>Toolify | TOS</title>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f9f9f9;
+                color: #333;
+            }
+    
+            header {
+                background-color: #1d1e28;
+                color: #fff;
+                padding: 15px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            #loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s ease-in-out;
+    }
+
+    #loader.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255, 0, 0, 0.3);
+      border-top: 5px solid red;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+            nav {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-family: 'Poppins', sans-serif; 
+            }
+    
+            nav .logo {
+                height: 60px;
+                width: auto;
+                margin-right: 20px;
+            }
+    
+            nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 30px;
+      transition: transform 0.3s  ease, color 0.3s ease;
+      color: #fff;
+      display: inline-block;
+    }
+
+
+    nav a:hover {
+  color: #b4b4b4; 
+}
+    
+            .container {
+                max-width: 1400px;
+                margin: 30px auto;
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+    
+            h2 {
+                color: #222546;
+                font-size: 2.5em;
+                text-align: center;
+                font-family: 'Outfit', sans-serif;
+                 font-weight: 700;
+            }
+    
+            p, ul {
+                line-height: 1.6;
+            }
+    
+
+            .important-links {
+            text-align: center;
+            margin-top: 40px;
+            color: #1d1e28;
+            
+        }
+
+        .important-links a {
+            color: #3498db;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        .important-links a:hover {
+            text-decoration: underline;
+        }
+
+            footer {
+                background-color: #1d1e28;
+                color: #fff;
+                text-align: center;
+                padding: 5px 10px;
+                margin-top: 20px;
+                font-family: 'Roboto', sans-serif;
+                font-size: 14.4px;
+                line-height: 1.2;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .sub-header {
+                font-weight: bold;
+                font-size: 1.2em;
+                margin-top: 20px;
+                color: #1d1e28;
+            }
+        </style>
+    </head>
+    
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+      </div>
+    
+    <header>
+        <nav>
+            <img src="assets/images/logo.png" alt="Toolify Logo" class="logo">
+            <div>
+                <a  href="index.html">Home</a>
+                <a href="">FAQs</a>
+                <a  href="Terms.html">Terms & Conditions</a>
+                <a href="products.html">Products</a>
+                <a  href="">Docs</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2> Terms Of Services</h2>
+            
+
+            <div class="sub-header">Copying </div>
+            <p>I do not agree or give permission for anyone to copy anything about <strong>Toolify</strong>, if caught doing this Products/Rebrands will be Revoked.</p>
+
+            <div class="sub-header">Server Boosts TOS</div>
+            <ul>
+                <li>I cannot/will not transfer or remove boosts from a server once I have boosted it.</li>
+                <li>If you or anything/anyone kicks the boosts in your server, I am not liable for re-boosting.</li>
+                <li>It is up to you to read this and remember to DISABLE/KICK all ANTIRAID bots.</li>
+                <li>For 1M Boosts, warranty is voided if Discord revokes. This is due to the fact that it is 100% out of my control. 3 Month boosts, on the other hand, have full warranty as there is no possibility of revokes. Discord revokes 1M ones (occasionally) due to the mass amount of people genning 1M Promo Codes. 3 Month ones are not affected as they're harder to generate.</li>
+            </ul>
+
+            <div class="sub-header">Tool TOS</div>
+            <ul>
+                <li>If a tool stops working, gets patched, gets leaked, etc., we will try to fix it and update it, but even if we don't, you still cannot get a refund.</li>
+                <li>We can end a project at any time without giving refunds.</li>
+                <li>Lifetime means for as long as the service/version is running.</li>
+                <li>It is important to keep your Keys/Logins safe. Keys/Logins that are lost will not be re-given, meaning you will have to pay a fee to receive your Key/Login back, which will be discussed via ticket.</li>
+                <li>You are not allowed to share any of your keys. Sharing keys will result in us suspending your product without refund/notice.</li>
+                <li>In our Discord Server, there is a 1 HWID Reset Limit each Month. If you need to reset before the Month, you Purchase a Reset on the Website. If you fail to comply with this rule, your License Key will be banned, and you have to pay a fee, which will be told within a Ticket.</li>
+                <li>Any captcha-related issues encountered in any of my tools will be attributed to your tokens, as they may be flagged, invalid, or already captched.</li>
+            </ul>
+
+            <div class="sub-header">Rebrands/SRC</div>
+            <ul>
+                <li>You must not sell below my prices/must sell the same durations. If you wish to discuss pricing, then we will discuss prior to the rebrand being completed.</li>
+                <li>You must not Trade/Giveaway any Free Keys, even if it is your Friend, Unless discussed with me.</li>
+                <li>As per any Website/Store - You do not have my permission to sell any of my sources. Leaking any SRCs/Rebrands or Selling any SRCS of mine will result in termination of any products you own.</li>
+                <li>We provide free updates on Patches/Flags. Updates will come with a fee. If we get a new SRC for any tool, the Rebrand would have to be Re-Purchased, but we offer up to 50% off.</li>
+                <li>We will provide you with a Login to an Account to access your Rebrands.</li>
+                <li>It is important to keep your Logins safe. Logins that are lost will not be re-given, meaning you will have to pay a fee to receive your Login back, which will be discussed via ticket.</li>
+                <li>No Sharing/Selling Keyauth Logins to Rebrands. If caught, it will result in a termination on Rebrand/Products you own without a refund.</li>
+            </ul>
+
+            <div class="sub-header">Transaction TOS</div>
+            <ul>
+                <li>NO REFUNDS are offered unless the issue is on our side.</li>
+                <li>We try to deliver your order as urgently as possible, but in the case that we can't do it immediately, you have to wait.</li>
+                <li>Attempting to reverse a payment after the product has been delivered. We will invalidate your purchased product. Since we provide digital goods and services, no refund will be issued.</li>
+                <li><strong>Toolify</strong> has the right to refuse service.</li>
+                <li>Our prices/TOS are subject to change at any time without notice. Renewal prices are at the current price at the time of renewal.</li>
+                <li>If you overpay in Paypal/Litecoin or any other payment method, all the extra money is being accepted as a donation. No refunds/extra products are going to be given.</li>
+                <li>If you pay with Paypal and do not send family and friends, you will not be refunded/get your product.</li>
+            </ul>
+        </div>
+    </main>
+
+
+    <div class="important-links">
+        <p><img src="assets/images/links.png" alt="Important Links Icon" style="width: 18px; height: 18px; margin-right: 5px;"> Some Important Links:</p>
+        <a href="https://discord.gg/toolifyshop "><i class="fab fa-discord"></i> Discord</a> | 
+        <a href="https://toolify.mysellix.io/"><i class="fas fa-store"></i> Webstore</a>
+    </div>
+    
+
+    <footer>
+        <p>  © Toolify - Provided by Quantum Developments.</p>
+    </footer>
+    <script>
+    
+        document.querySelectorAll('nav a').forEach(link => {
+          link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href !== '#') {
+              e.preventDefault(); 
+              const loader = document.getElementById('loader');
+              loader.classList.add('active'); 
+              setTimeout(() => {
+                window.location.href = href; 
+              }, 500); 
+            }
+          });
+        });
+      </script>
+</body>
+</html>

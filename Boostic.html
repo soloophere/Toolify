@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Toolify | Boostic</title>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #16141d;
+    color: white;
+}
+#loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.3s ease-in-out;
+    }
+
+    #loader.active {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255, 0, 0, 0.3);
+      border-top: 5px solid red;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav .logo {
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
+}
+
+nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 30px;
+      transition: transform 0.3s  ease, color 0.3s ease;
+      color: #fff;
+      display: inline-block;
+    }
+
+
+    nav a:hover {
+  color: #b4b4b4; 
+}
+
+header {
+    background-color: #1d1e28;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-header {
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+
+.center-header h1 {
+    font-size: 3em; 
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px; 
+    margin: 0;
+}
+
+.center-header h1 .heading-icon {
+    width: 40px; 
+    height: auto; 
+    margin-right: 10px; 
+}
+
+.content {
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+.content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    margin-top: 20px;
+    color: #fff; 
+}
+
+.content h2 .icon {
+    margin-left: 10px; 
+    width: 24px; 
+    height: auto; 
+}
+.content p, .content li {
+    font-size: 1.2em; 
+    line-height: 1.8;
+    color: #d0d0d0; 
+}
+
+.content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.content ul li {
+    margin-bottom: 15px;
+    padding-left: 30px; 
+    position: relative;
+}
+
+.content ul li::before {
+    content: "\2022"; 
+    color: red; 
+    font-size: 1.5em; 
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.important-links {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    color: #b0b0b0;
+}
+
+.important-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+.important-links a:hover {
+    text-decoration: underline;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+main {
+    flex-grow: 1;
+}
+
+footer {
+    background-color: #1d1e28;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14.4px;
+    line-height: 1.2;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="loader">
+        <div class="spinner"></div>
+      </div>
+    
+    <header>
+        <nav>
+            <img src="assets/images/logo.png" alt="Toolify Logo" class="logo">
+            <div>
+                <a href="index.html">Home</a>
+                <a href="">FAQs</a>
+                <a href="Terms.html">Terms & Conditions</a>
+                <a href="products.html">Products</a>
+                <a href="">Docs</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="center-header">
+        <h1><img src="assets/images/crown.png" alt="Icon" class="heading-icon"> Toolify Boostic</h1>
+    </section>
+
+    <div class="content">
+        <h2>What is Toolify Boostic<img src="assets/images/crown.png" alt="Icon" class="icon"></h2>
+        <p>Toolify Boostic is a feature-packed <strong>Discord Boost Bot</strong> with autobuy delivery, real-time stock tracking, custom watermarking, and mass boosting. It offers an easy, efficient boosting experience with advanced error handling and automated retries.</p>
+
+        <h2>Features<img src="assets/images/feature.png" alt="Icon" class="icon"></h2>
+        <ul>
+            <li>Multi Threading Boosting System</li>
+            <li>Both Proxy/Proxyless Mode</li>
+            <li><strong>Extensive Configuration Options:</strong> The bot offers extensive customization options, including the ability to customize embeds, adjust autobuy delivery messages, and enable or disable specific features as needed.</li>
+            <li>Real Time Stock Overview</li>
+            <li><strong>Custom Watermarking:</strong> Bio, Profile Picture, Banner, Nickname, and Pronouns</li>
+            <li><strong>Autobuy Boost Delivery:</strong> Surprise</li>
+            <li>Seamless User Experience</li>
+            <li>Enhanced Error Handling & Advanced Logging</li>
+            <li><strong>One Click Autobuy Setup:</strong> Simplified, single-step setup for seamless autobuy</li>
+            <li><strong>Key Boosting:</strong> Customers can use keys to boost a server and can be used in any autobuy</li>
+        </ul>
+
+        <h2>More Features<img src="assets/images/more features.png" alt="Icon" class="icon"></h2>
+        <ul>
+            <li><strong>Mass Boosting:</strong> Boost multiple servers with a single command</li>
+            <li><strong>Queue System:</strong> Ensures smooth and efficient auto boost delivery</li>
+            <li><strong>Error Messages on Auto Delivery:</strong> Customers are notified if their order fails during delivery</li>
+            <li><strong>Order ID-Based Logs:</strong> Track orders using unique order IDs for easy reference</li>
+            <li><strong>Unboost Order:</strong> Allows for the removal of boosts from a server</li>
+            <li><strong>Boosting Logs:</strong> Detailed logs for each order, including token status, success/failure, and captcha handling</li>
+            <li><strong>Custom Watermarking:</strong> Customers can apply custom watermarks to tokens when purchasing through autobuy</li>
+            <li><strong>Auto Stock Manager:</strong> Automatically marks products as out of stock if there are insufficient tokens for autobuy</li>
+            <li><strong>Transfer Boost:</strong> Transfer a boost to a new server using the order ID</li>
+            <li><strong>Token Checker:</strong> Can check the token invalid/locked/valid/nitro</li>
+            <li><strong>Order Completion Attempts/Retries:</strong> Automatically retries order completion in case of failure</li>
+        </ul>
+
+        <h2>Automated Delivery<img src="assets/images/cart.png" alt="Icon" class="icon"></h2>
+        <p>Coming Soon</p>
+
+        <h2>Commands<img src="assets/images/commands.png" alt="Icon" class="icon"></h2>
+        <p>Cooming Soon</p>
+
+        <h2>Key Features<img src="assets/images/keyfeatures.png" alt="Icon" class="icon"></h2>
+        <ul>
+            <li><strong>Order Status Web Page:</strong> Customers are provided with a dedicated URL to track their order status in real time, including details of completed boosts, failures, and associated failure reasons.</li>
+            <li><strong>Live Stock Web Page:</strong> Customers can access a live inventory of available stock within the boost bot via a URL, which can be seamlessly integrated into the product description.</li>
+            <li><strong>Redeem Web Page:</strong> Customers can redeem their boosting key via the dedicated web page.</li>
+        </ul>
+    </div>
+
+    <div class="important-links">
+        <p><img src="assets/images/links.png" alt="Important Links Icon" style="width: 18px; height: 18px; margin-right: 5px;"> Some Important Links:</p>
+        <a href="https://discord.gg/toolifyshop "><i class="fab fa-discord"></i> Discord</a> | 
+        <a href="https://toolify.mysellix.io/"><i class="fas fa-store"></i> Webstore</a>
+    </div>
+
+    <footer>
+        <p>  © Toolify - Provided by Quantum Developments.</p>
+    </footer>
+    <script>
+    
+        document.querySelectorAll('nav a').forEach(link => {
+          link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href !== '#') {
+              e.preventDefault(); 
+              const loader = document.getElementById('loader');
+              loader.classList.add('active'); 
+              setTimeout(() => {
+                window.location.href = href; 
+              }, 500); 
+            }
+          });
+        });
+      </script>
+</body>
+</html>
